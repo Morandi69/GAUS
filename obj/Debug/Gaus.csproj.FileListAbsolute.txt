@@ -1,0 +1,10 @@
+E:\Проэкты C#\Gaus\bin\Debug\Gaus.exe.config
+E:\Проэкты C#\Gaus\bin\Debug\Gaus.exe
+E:\Проэкты C#\Gaus\bin\Debug\Gaus.pdb
+E:\Проэкты C#\Gaus\obj\Debug\Gaus.csprojAssemblyReference.cache
+E:\Проэкты C#\Gaus\obj\Debug\Gaus.Form1.resources
+E:\Проэкты C#\Gaus\obj\Debug\Gaus.Properties.Resources.resources
+E:\Проэкты C#\Gaus\obj\Debug\Gaus.csproj.GenerateResource.cache
+E:\Проэкты C#\Gaus\obj\Debug\Gaus.csproj.CoreCompileInputs.cache
+E:\Проэкты C#\Gaus\obj\Debug\Gaus.exe
+E:\Проэкты C#\Gaus\obj\Debug\Gaus.pdb
