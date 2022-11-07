@@ -22,9 +22,15 @@ namespace Gaus
                         { 2, 2,  4, 9} };
 
         double[,] Mass3 = { {0, -1, 3,  1, 5},
-                            {4, -1, 5,  4, 4},
-                            {2, -2, 4,  1, 6},
-                            {1, -4, 5, -1, 3} };
+                            {4, 0, 5,  4, 4},
+                            {2, -2,0,  1, 6},
+                            {1, -4, 5, 0, 3} };
+
+
+        double[,] Mass4 = { {0, 0, 0,  0, 5},
+                            {0, 0, 0,  0, 4},
+                            {2, -2,0,  1, 6},
+                            {1, -4, 5, 0, 3} };
 
         double[,] Mass2 = { {1, 2, 3, 3 },
                             {3, 5, 7, 0 },
@@ -33,7 +39,7 @@ namespace Gaus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double[] x = Gaus(Mass3, 4);
+            double[] x = Gaus(Mass4, 4);
             Label[] labels = { label1, label2, label3, label4 };
             for (int i = 0; i < x.Length; i++)
             {
@@ -41,8 +47,7 @@ namespace Gaus
             }
         }
 
-
-        double[] Gaus(double[,] Matrix, int n)
+        double Detreminant(double[,]Matrix,int n)
         {
             for (int i = 0; i < n - 1; i++)
             {
@@ -56,7 +61,54 @@ namespace Gaus
                     }
                 }
             }
+            double d = 1;
+            for (int k = 1; k < n; k++)
+            {
+                for (int j = k; j < n; j++)
+                {
+                    double m = Matrix[j, k - 1] / Matrix[k - 1, k - 1];
+                    for (int i = 0; i < n + 1; i++)
+                    {
+                        Matrix[j, i] = Matrix[j, i] - m * Matrix[k - 1, i];
+                    }
+                }
+            }
+            for (int i = 0; i < n; i++)
+            {
+                d*=Matrix[i, i];
+            }
+            if (d <0||d>0)
+            {
+                return d;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
+        double[] Gaus(double[,] Matrix, int n)
+        {
             double[] x = new double[n];
+            if (Detreminant(Matrix, n) == 0)
+            {
+                MessageBox.Show("Опрежелитель =0");
+                return x;
+            }
+            for (int i = 0; i < n - 1; i++)
+            {
+                if (Matrix[i, i] == 0)
+                {
+                    for (int j = 0; j < n + 1; j++)
+                    {
+                        double temp = Matrix[i, j];
+                        Matrix[i, j] = Matrix[i + 1, j];
+                        Matrix[i + 1, j] = temp;
+                    }
+                }
+            }
+            
             for (int k = 1; k < n; k++)
             {
                 for (int j = k; j < n; j++)
@@ -77,6 +129,12 @@ namespace Gaus
                 }
             }
             return x;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double det = Detreminant(Mass4, 4);
+            label5.Text = det.ToString();
         }
     }
 }

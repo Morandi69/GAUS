@@ -8,3 +8,14 @@ E:\Проэкты C#\Gaus\obj\Debug\Gaus.csproj.GenerateResource.cache
 E:\Проэкты C#\Gaus\obj\Debug\Gaus.csproj.CoreCompileInputs.cache
 E:\Проэкты C#\Gaus\obj\Debug\Gaus.exe
 E:\Проэкты C#\Gaus\obj\Debug\Gaus.pdb
+C:\Users\notox\Documents\GIT\GAUS\bin\Debug\Gaus.exe.config
+C:\Users\notox\Documents\GIT\GAUS\bin\Debug\Gaus.exe
+C:\Users\notox\Documents\GIT\GAUS\bin\Debug\Gaus.pdb
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.csproj.AssemblyReference.cache
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.csproj.SuggestedBindingRedirects.cache
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.Form1.resources
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.Properties.Resources.resources
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.csproj.GenerateResource.cache
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.csproj.CoreCompileInputs.cache
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.exe
+C:\Users\notox\Documents\GIT\GAUS\obj\Debug\Gaus.pdb
