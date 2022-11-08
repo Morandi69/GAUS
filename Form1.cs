@@ -39,7 +39,7 @@ namespace Gaus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double[] x = Gaus(Mass3, 4);
+            double[] x = Gaus(A2, 3);
             Label[] labels = { label1, label2, label3, label4 };
             for (int i = 0; i < x.Length; i++)
             {
@@ -49,7 +49,7 @@ namespace Gaus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            double det = Detreminant(Mass3, 4);
+            double det = Detreminant(A2, 3);
             label5.Text = det.ToString();
         }
 
