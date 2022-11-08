@@ -39,7 +39,7 @@ namespace Gaus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double[] x = Gaus(Mass3, 3);
+            double[] x = Gaus(Mass3, 4);
             Label[] labels = { label1, label2, label3, label4 };
             for (int i = 0; i < x.Length; i++)
             {
@@ -55,32 +55,7 @@ namespace Gaus
 
         double Detreminant(double[,]Matrix,int n)
         {
-            for (int i = 0; i < n; i++)
-            {
-                if (Matrix[i, i] == 0)
-                {
-                    if (i == n - 1)
-                    {
-                        for (int j = 0; j < n + 1; j++)
-                        {
-                            double temp = Matrix[i, j];
-                            Matrix[i, j] = Matrix[i - 1, j];
-                            Matrix[i - 1, j] = temp;
-                        }
-                    }
-                    else
-                    {
-                        for (int j = 0; j < n + 1; j++)
-                        {
-                            double temp = Matrix[i, j];
-                            Matrix[i, j] = Matrix[i + 1, j];
-                            Matrix[i + 1, j] = temp;
-                        }
-
-                    }
-                    
-                }
-            }
+            
             double d = 1;
             for (int k = 1; k < n; k++)
             {
@@ -120,11 +95,24 @@ namespace Gaus
             {
                 if (Matrix[i, i] == 0)
                 {
-                    for (int j = 0; j < n + 1; j++)
+                    if (i == n - 1)
                     {
-                        double temp = Matrix[i, j];
-                        Matrix[i, j] = Matrix[i + 1, j];
-                        Matrix[i + 1, j] = temp;
+                        for (int j = 0; j < n + 1; j++)
+                        {
+                            double temp = Matrix[i, j];
+                            Matrix[i, j] = Matrix[i - 1, j];
+                            Matrix[i - 1, j] = temp;
+                        }
+                    }
+                    else
+                    {
+                        for (int j = 0; j < n + 1; j++)
+                        {
+                            double temp = Matrix[i, j];
+                            Matrix[i, j] = Matrix[i + 1, j];
+                            Matrix[i + 1, j] = temp;
+                        }
+
                     }
                 }
             }
